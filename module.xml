@@ -140,7 +140,7 @@
 
 	<resource name="mc-cards" path="mc.cards.xml" type="application/xml" />
 	<resourceDir name="mc-images" path="cards" type="image/png" />
-
+	
 	<resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml" />
 	<resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv"
 		output="thead" />
