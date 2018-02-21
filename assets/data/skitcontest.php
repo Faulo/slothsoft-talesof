@@ -177,7 +177,7 @@ if ($dataPath->evaluate('count(*)', $dataRoot) > 100) {
 
 return $dataRoot;
 
-$finalDoc = $dom->transform($dataDoc, 'contest.xsl');
+$finalDoc = $dom->transformToDocument($dataDoc, 'contest.xsl');
 
 header('content-type: application/xhtml+xml; charset=UTF-8');
 

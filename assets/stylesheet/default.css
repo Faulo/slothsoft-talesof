@@ -1,9 +1,9 @@
 @font-face {
 	font-family: myMelnics;
 	src:local("MelniksFont"),
-		url(/getResource.php/talesof/fonts/MelniksFont.ttf) format("truetype"),
-		url(/getResource.php/talesof/fonts/MelniksFont.otf) format("opentype"),
-		url(/getResource.php/talesof/fonts/MelniksFont.svg) format("svg");
+		url(/getAsset.php/slothsoft@talesof/static/fonts/MelniksFont.ttf) format("truetype"),
+		url(/getAsset.php/slothsoft@talesof/static/fonts/MelniksFont.otf) format("opentype"),
+		url(/getAsset.php/slothsoft@talesof/static/fonts/MelniksFont.svg) format("svg");
 }
 .MagicCarta td {
 	padding: 0px 4px;

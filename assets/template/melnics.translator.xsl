@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:sfm="http://schema.slothsoft.net/farah/module">
+	
+	<xsl:import href="farah://slothsoft@farah/xsl/module"/>
 
-	<xsl:template match="data[not(translator)]">
+	<xsl:template match="/sfm:fragment">
 		<div class="Translator MelnicsTranslator">
+			<xsl:apply-templates select="sfm:error" mode="sfm:html"/>
 			<article>
 				<h2>Melnics Translator</h2>
 				<label>

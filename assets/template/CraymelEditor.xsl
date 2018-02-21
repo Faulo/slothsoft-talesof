@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:sfm="http://schema.slothsoft.net/farah/module">
+	
+	<xsl:import href="farah://slothsoft@farah/xsl/module"/>
  
 	<xsl:variable name="craymels" select="//craymel"/>
 	<xsl:variable name="fringeSpells" select="//data/spells"/>
 	<xsl:variable name="freeCraymels" select="//data/craymels/craymel"/>
 	<xsl:variable name="mages" select="//data/mage"/>
+	
+	<xsl:template match="sfm:fragment">
+		<div>
+			<xsl:apply-templates select="sfm:error" mode="sfm:html"/>
+			<xsl:apply-templates select="sfm:document[@name='CraymelEditor']/data"/>
+		</div>
+	</xsl:template>
+	
+	<xsl:template match="sfm:error">
+		<xsl:apply-templates select="sfm:error" mode="sfm:html"/>
+	</xsl:template>
 	
 	<xsl:template match="data">
 		<div class="CraymelEditor">

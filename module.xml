@@ -1,148 +1,156 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module>
-	<fragment name="skit-contest">
-		<template name="_skitcontest" />
-		<data name="skitcontest" />
-		<res name="/core/language-registry" load="xml" />
-	</fragment>
-	<fragment name="chat">
-		<param name="chat-database" value="tales" />
-		<template name="/chat/shoutbox" />
-		<call name="/chat/default" as="chat" />
-	</fragment>
+<?xml version="1.0"?>
+<module xmlns="http://schema.slothsoft.net/farah/module" xmlns:sfm="http://schema.slothsoft.net/farah/module">
+  <!--
+Farah Module Manifest
 
-	<fragment name="tales-home">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<template name="tales-home" />
-		</fragment>
-		<call name="chat" />
-	</fragment>
+Module: talesof
+Vendor: slothsoft
+Farah ID: farah://slothsoft@talesof
+Composer ID: slothsoft/talesof
 
-	<fragment name="mc-home">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<template name="mc-home" />
-		</fragment>
-		<call name="chat" />
-	</fragment>
+Homepage: http://farah.slothsoft.net/modules/talesof
+Packagist: https://packagist.org/packages/slothsoft/talesof
+GitHub: https://github.com/Faulo/slothsoft-talesof
 
-	<fragment name="eternia-home">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<template name="eternia-home" />
-		</fragment>
-		<call name="chat" />
-	</fragment>
-	<fragment name="graces-home">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<template name="graces-home" />
-		</fragment>
-		<call name="chat" />
-	</fragment>
-
-	<fragment name="craymelEditor">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<template name="CraymelEditor" />
-			<style name="default" />
-			<struc name="/core/DOM" />
-			<script name="craymelEditor" />
-			<script name="/core/TouchAndDrag" />
-			<res name="CraymelEditor" load="xml" />
-		</fragment>
-		<call name="chat" />
-	</fragment>
-
-	<fragment name="melnicsTest">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<template name="Melnics" />
-			<style name="default" />
-			<data name="melnics.test" />
-		</fragment>
-	</fragment>
-	<fragment name="melnicsTable">
-		<template name="MelnicsTable" />
-		<style name="default" />
-		<style name="/slothsoft/default" />
-		<data name="melnics.test" />
-	</fragment>
-	<fragment name="melnicsTranslator">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<struc name="/core/DOM" />
-			<template name="melnics.translator" />
-			<style name="default" />
-			<style name="/slothsoft/kana" />
-			<script name="MelnicsTranslator" />
-		</fragment>
-	</fragment>
-
-	<fragment name="link-heroes">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<struc name="/core/DOM" />
-			<script name="/core/Sortable" />
-			<res name="ToL.Heroes" load="xml" />
-			<template name="tol-heroes" />
-		</fragment>
-	</fragment>
-
-	<fragment name="link-pulls">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<struc name="/core/DOM" />
-			<script name="/core/Sortable" />
-			<style name="default" />
-			<template name="tol-pulls" />
-		</fragment>
-	</fragment>
-
-	<fragment name="mc-game">
-		<struc name="/slothsoft/default" />
-
-		<template name="mc-board" />
-		<style name="default" />
-		<res name="mc-cards" load="xml" />
-
-	</fragment>
-
-	<fragment name="carta">
-		<struc name="/slothsoft/default" />
-		<fragment name="content">
-			<template name="MagicCarta" />
-			<style name="default" />
-			<res name="MagicCarta" load="xml" />
-		</fragment>
-	</fragment>
-
-	<fragment name="一番くじ">
-		<data name="ichibankuji" />
-		<template name="ichibankuji" />
-		<param name="standalone" scope="global" />
-	</fragment>
-
-	<fragment name="ichibankuji">
-		<data name="ichibankuji" />
-		<template name="ichibankuji" />
-		<param name="standalone" scope="global" />
-	</fragment>
-
-	<resourceDir name="fonts" path="fonts" type="application/*" />
-	<resourceDir name="patterns" path="patterns" type="image/svg+xml" />
-
-	<resource name="sites" path="sites.xml" type="application/xml" />
-	<resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml" />
-	<resource name="MagicCarta" path="MagicCarta.xml" type="application/xml" />
-	<resource name="Melnics" path="Melnics.xml" type="application/xml" />
-
-	<resource name="mc-cards" path="mc.cards.xml" type="application/xml" />
-	<resourceDir name="mc-images" path="cards" type="image/png" />
-	
-	<resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml" />
-	<resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv"
-		output="thead" />
-
+Llo
+-->
+  <default-configuration/>
+  <assets>
+    <resource-directory name="data" path="data" type="application/x-php"/>
+    <resource-directory name="css" path="stylesheet" type="text/css"/>
+    <resource-directory name="js" path="script" type="application/javascript"/>
+    <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
+    <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
+    <resource-directory name="pages" path="pages" type="application/xml"/>
+    <fragment name="skit-contest">
+      <use-template ref="xsl/_skitcontest"/>
+      <use-document ref="data/skitcontest"/>
+      <use-document ref="//slothsoft@core/static/language-registry"/>
+    </fragment>
+    <fragment name="chat">
+      <param name="chat-database" value="tales"/>
+      <use-template ref="//slothsoft@chat/xsl/shoutbox"/>
+      <use-document as="chat" ref="//slothsoft@chat/default"/>
+    </fragment>
+    <fragment name="tales-home">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <use-template ref="xsl/tales-home"/>
+      </fragment>
+      <use-document ref="chat"/>
+    </fragment>
+    <fragment name="mc-home">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <use-template ref="xsl/mc-home"/>
+      </fragment>
+      <use-document ref="chat"/>
+    </fragment>
+    <fragment name="eternia-home">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <use-template ref="xsl/eternia-home"/>
+      </fragment>
+      <use-document ref="chat"/>
+    </fragment>
+    <fragment name="graces-home">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <use-template ref="xsl/graces-home"/>
+      </fragment>
+      <use-document ref="chat"/>
+    </fragment>
+    <fragment name="craymelEditor">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <use-template ref="xsl/CraymelEditor"/>
+        <use-stylesheet ref="css/default"/>
+        <include-fragment ref="//slothsoft@core/DOM"/>
+        <use-script ref="js/craymelEditor"/>
+        <use-script ref="//slothsoft@core/js/TouchAndDrag"/>
+        <use-document ref="static/CraymelEditor"/>
+      </fragment>
+      <use-document ref="chat"/>
+    </fragment>
+    <fragment name="melnicsTest">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <use-template ref="xsl/Melnics"/>
+        <use-stylesheet ref="css/default"/>
+        <use-document ref="data/melnics.test"/>
+      </fragment>
+    </fragment>
+    <fragment name="melnicsTable">
+      <use-template ref="xsl/MelnicsTable"/>
+      <use-stylesheet ref="css/default"/>
+      <use-stylesheet ref="//slothsoft@slothsoft/css/default"/>
+      <use-document ref="data/melnics.test"/>
+    </fragment>
+    <fragment name="melnicsTranslator">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <include-fragment ref="//slothsoft@core/DOM"/>
+        <use-template ref="xsl/melnics.translator"/>
+        <use-stylesheet ref="css/default"/>
+        <use-stylesheet ref="//slothsoft@slothsoft/css/kana"/>
+        <use-script ref="js/MelnicsTranslator"/>
+      </fragment>
+    </fragment>
+    <fragment name="link-heroes">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <include-fragment ref="//slothsoft@core/DOM"/>
+        <use-script ref="//slothsoft@core/js/Sortable"/>
+        <use-document ref="static/ToL.Heroes"/>
+        <use-template ref="xsl/tol-heroes"/>
+      </fragment>
+    </fragment>
+    <fragment name="link-pulls">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <include-fragment ref="//slothsoft@core/DOM"/>
+        <use-script ref="//slothsoft@core/js/Sortable"/>
+        <use-stylesheet ref="css/default"/>
+        <use-template ref="xsl/tol-pulls"/>
+      </fragment>
+    </fragment>
+    <fragment name="mc-game">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <use-template ref="xsl/mc-board"/>
+      <use-stylesheet ref="css/default"/>
+      <use-document ref="static/mc-cards"/>
+    </fragment>
+    <fragment name="carta">
+      <include-fragment ref="//slothsoft@slothsoft/default"/>
+      <fragment name="content">
+        <use-template ref="xsl/MagicCarta"/>
+        <use-stylesheet ref="css/default"/>
+        <use-document ref="static/MagicCarta"/>
+      </fragment>
+    </fragment>
+    <fragment name="&#x4E00;&#x756A;&#x304F;&#x3058;">
+      <use-document ref="data/ichibankuji"/>
+      <use-template ref="xsl/ichibankuji"/>
+      <param name="standalone" scope="global"/>
+    </fragment>
+    <fragment name="ichibankuji">
+      <use-document ref="data/ichibankuji"/>
+      <use-template ref="xsl/ichibankuji"/>
+      <param name="standalone" scope="global"/>
+    </fragment>
+    <directory name="static">
+      <resource-directory name="fonts" path="fonts" type="application/*"/>
+      <resource-directory name="patterns" path="patterns" type="image/svg+xml"/>
+      <resource name="sites" path="sites.xml" type="application/xml"/>
+      <resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml"/>
+      <resource name="MagicCarta" path="MagicCarta.xml" type="application/xml"/>
+      <resource name="Melnics" path="Melnics.xml" type="application/xml"/>
+      <resource name="mc-cards" path="mc.cards.xml" type="application/xml"/>
+      <resource-directory name="mc-images" path="cards" type="image/png"/>
+      <resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml"/>
+      <resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv">
+        <options output="thead"/>
+      </resource>
+    </directory>
+  </assets>
 </module>

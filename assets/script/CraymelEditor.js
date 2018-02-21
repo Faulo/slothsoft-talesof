@@ -34,7 +34,7 @@ var CraymelEditor = {
 				mageNo = this.getAttribute("data-cage");
 				this._ce.setCraymel(craymelName, mageNo);
 			} catch(e) {
-				alert(e);
+				console.log(e);
 			}
 			
 			this._ce.drawParent.removeAttribute("data-status");
@@ -51,12 +51,12 @@ var CraymelEditor = {
 		//this.drawParent.addEventListener("touchstart", function(eve) {}, false);
 		
 		req = new XMLHttpRequest();
-		req.open("GET", "/getTemplate.php/talesof/CraymelEditor", false);
+		req.open("GET", "/getAsset.php/talesof/xsl/CraymelEditor", false);
 		req.send();
 		this.templateDoc = req.responseXML;
 		
 		req = new XMLHttpRequest();
-		req.open("GET", "/getResource.php/talesof/CraymelEditor", false);
+		req.open("GET", "/getAsset.php/talesof/static/CraymelEditor", false);
 		req.send();
 		this.dataDoc = req.responseXML;
 		
@@ -85,8 +85,8 @@ var CraymelEditor = {
 		//*/
 		this.drawNode = XSLT.transformToNode(this.dataDoc, this.templateDoc, document);
 		
-		oldNodes = [this.drawParent.getElementsByTagName("table")[0], this.drawParent.getElementsByTagName("table")[1]];
-		newNodes = [this.drawNode.getElementsByTagName("table")[0], this.drawNode.getElementsByTagName("table")[1]];
+		oldNodes = this.drawParent.querySelectorAll("table");
+		newNodes = this.drawNode.querySelectorAll("table");
 		for (i = 0; i < oldNodes.length; i++) {
 			oldNodes[i].parentNode.replaceChild(
 				newNodes[i],

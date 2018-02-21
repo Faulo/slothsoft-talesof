@@ -1,4 +1,6 @@
 <?php
+
+return function() {
 $abc = [
     'a',
     'b',
@@ -42,7 +44,8 @@ $kanaList = array_merge($kanaList, [
 ]);
 $randLimit = 10;
 
-$dataRoot = $dataDoc->createDocumentFragment();
+$dataDoc = new DOMDocument();
+$dataRoot = $dataDoc->createElement('test');
 
 foreach ($kanaList as $c) {
     $node = $dataDoc->createElement('character');
@@ -88,4 +91,4 @@ if ($kanaList) {
 }
 
 return $dataRoot;
-?>
+};
