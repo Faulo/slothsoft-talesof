@@ -22,6 +22,19 @@ Llo
     <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
     <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
     <resource-directory name="pages" path="pages" type="application/xml"/>
+    <directory name="static">
+      <resource-directory name="fonts" path="fonts" type="application/*"/>
+      <resource-directory name="patterns" path="patterns" type="image/svg+xml"/>
+      <resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml"/>
+      <resource name="MagicCarta" path="MagicCarta.xml" type="application/xml"/>
+      <resource name="Melnics" path="Melnics.xml" type="application/xml"/>
+      <resource name="mc-cards" path="mc.cards.xml" type="application/xml"/>
+      <resource-directory name="mc-images" path="cards" type="image/png"/>
+      <resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml"/>
+      <resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv">
+        <options output="thead"/>
+      </resource>
+    </directory>
     <fragment name="skit-contest">
       <use-template ref="xsl/_skitcontest"/>
       <use-document ref="data/skitcontest"/>
@@ -138,19 +151,5 @@ Llo
       <use-template ref="xsl/ichibankuji"/>
       <param name="standalone" scope="global"/>
     </fragment>
-    <directory name="static">
-      <resource-directory name="fonts" path="fonts" type="application/*"/>
-      <resource-directory name="patterns" path="patterns" type="image/svg+xml"/>
-      <resource name="sites" path="sites.xml" type="application/xml"/>
-      <resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml"/>
-      <resource name="MagicCarta" path="MagicCarta.xml" type="application/xml"/>
-      <resource name="Melnics" path="Melnics.xml" type="application/xml"/>
-      <resource name="mc-cards" path="mc.cards.xml" type="application/xml"/>
-      <resource-directory name="mc-images" path="cards" type="image/png"/>
-      <resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml"/>
-      <resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv">
-        <options output="thead"/>
-      </resource>
-    </directory>
   </assets>
 </module>
