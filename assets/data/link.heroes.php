@@ -7,7 +7,7 @@ use DOMDocument;
  *
  * $url = 'https://docs.google.com/spreadsheets/d/1gIuZ1PT9R8PLBWLeIefTFfzTRJXfEr_n9_A7TOHH3Ug/export?format=csv';
  *
- * if ($file = $this->loadExternalFile($url, TIME_DAY)) {
+ * if ($file = $this->loadExternalFile($url, Seconds::DAY)) {
  * my_dump($file);
  * }
  *
@@ -19,7 +19,7 @@ $charLinkList = [];
 
 for ($i = 1; $i < 10; $i ++) {
     $url = sprintf($baseURL, $i);
-    if ($xpath = $this->loadExternalXPath($url, TIME_DAY)) {
+    if ($xpath = $this->loadExternalXPath($url, Seconds::DAY)) {
         $linkNodeList = $xpath->evaluate('//*[@id="mw-pages"]//*[@class="mw-content-ltr"]//*[@href]');
         if (! $linkNodeList->length) {
             break;
@@ -56,7 +56,7 @@ $charDataList = [];
 
 foreach ($charLinkList as $charLink) {
 	//echo $charLink . PHP_EOL;
-    if ($xpath = $this->loadExternalXPath($charLink, TIME_MONTH)) {
+    if ($xpath = $this->loadExternalXPath($charLink, Seconds::MONTH)) {
         $tmpNodeList = $xpath->evaluate('//a[img]');
         foreach ($tmpNodeList as $tmpNode) {
             $tmpNode->textContent = $xpath->evaluate('concat(" ", img/@alt, " ")', $tmpNode);
