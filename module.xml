@@ -77,10 +77,10 @@ Llo
       <import ref="//slothsoft@slothsoft/default"/>
       <fragment name="content">
         <use-template ref="xsl/CraymelEditor"/>
-        <use-stylesheet ref="css/default"/>
+        <link-stylesheet ref="css/default"/>
         <import ref="//slothsoft@core/DOM"/>
-        <use-script ref="js/craymelEditor"/>
-        <use-script ref="//slothsoft@core/js/TouchAndDrag"/>
+        <link-script ref="js/craymelEditor"/>
+        <link-script ref="//slothsoft@core/js/TouchAndDrag"/>
         <use-document ref="static/CraymelEditor"/>
       </fragment>
       <use-document ref="chat"/>
@@ -89,14 +89,14 @@ Llo
       <import ref="//slothsoft@slothsoft/default"/>
       <fragment name="content">
         <use-template ref="xsl/Melnics"/>
-        <use-stylesheet ref="css/default"/>
+        <link-stylesheet ref="css/default"/>
         <use-document ref="data/melnics.test"/>
       </fragment>
     </fragment>
     <fragment name="melnicsTable">
       <use-template ref="xsl/MelnicsTable"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="//slothsoft@slothsoft/css/default"/>
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="//slothsoft@slothsoft/css/default"/>
       <use-document ref="data/melnics.test"/>
     </fragment>
     <fragment name="melnicsTranslator">
@@ -104,16 +104,16 @@ Llo
       <fragment name="content">
         <import ref="//slothsoft@core/DOM"/>
         <use-template ref="xsl/melnics.translator"/>
-        <use-stylesheet ref="css/default"/>
-        <use-stylesheet ref="//slothsoft@slothsoft/css/kana"/>
-        <use-script ref="js/MelnicsTranslator"/>
+        <link-stylesheet ref="css/default"/>
+        <link-stylesheet ref="//slothsoft@slothsoft/css/kana"/>
+        <link-script ref="js/MelnicsTranslator"/>
       </fragment>
     </fragment>
     <fragment name="link-heroes">
       <import ref="//slothsoft@slothsoft/default"/>
       <fragment name="content">
         <import ref="//slothsoft@core/DOM"/>
-        <use-script ref="//slothsoft@core/js/Sortable"/>
+        <link-script ref="//slothsoft@core/js/Sortable"/>
         <use-document ref="static/ToL.Heroes"/>
         <use-template ref="xsl/tol-heroes"/>
       </fragment>
@@ -122,22 +122,22 @@ Llo
       <import ref="//slothsoft@slothsoft/default"/>
       <fragment name="content">
         <import ref="//slothsoft@core/DOM"/>
-        <use-script ref="//slothsoft@core/js/Sortable"/>
-        <use-stylesheet ref="css/default"/>
+        <link-script ref="//slothsoft@core/js/Sortable"/>
+        <link-stylesheet ref="css/default"/>
         <use-template ref="xsl/tol-pulls"/>
       </fragment>
     </fragment>
     <fragment name="mc-game">
       <import ref="//slothsoft@slothsoft/default"/>
       <use-template ref="xsl/mc-board"/>
-      <use-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/default"/>
       <use-document ref="static/mc-cards"/>
     </fragment>
     <fragment name="carta">
       <import ref="//slothsoft@slothsoft/default"/>
       <fragment name="content">
         <use-template ref="xsl/MagicCarta"/>
-        <use-stylesheet ref="css/default"/>
+        <link-stylesheet ref="css/default"/>
         <use-document ref="static/MagicCarta"/>
       </fragment>
     </fragment>
