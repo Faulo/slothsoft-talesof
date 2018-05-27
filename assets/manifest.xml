@@ -21,54 +21,54 @@
     
     <fragment name="html">
 		<fragment name="home">
-			<use-template ref="xsl/tales-home"/>
+			<use-template ref="/xsl/tales-home"/>
 		</fragment>
 	    <fragment name="carta">
 	     	<fragment name="home">
-	        	<use-template ref="xsl/mc-home"/>
+	        	<use-template ref="/xsl/mc-home"/>
 	    	</fragment>
 	     	<fragment name="list">
-		        <use-template ref="xsl/MagicCarta"/>
-		        <link-stylesheet ref="css/default"/>
-		        <use-document ref="static/MagicCarta"/>
+		        <use-template ref="/xsl/MagicCarta"/>
+		        <link-stylesheet ref="/css/default"/>
+		        <use-document ref="/static/MagicCarta"/>
 	    	</fragment>
 	    </fragment>
 	    <fragment name="melnics">
 	     	<fragment name="test">
-		        <use-template ref="xsl/Melnics"/>
-		        <link-stylesheet ref="css/default"/>
-		        <use-document ref="api/melnics-test"/>
+		        <use-template ref="/xsl/Melnics"/>
+		        <link-stylesheet ref="/css/default"/>
+		        <use-document ref="/api/melnics-test"/>
 	    	</fragment>
 	     	<fragment name="table">
-		      <use-template ref="xsl/MelnicsTable"/>
-		      <link-stylesheet ref="css/default"/>
+		      <use-template ref="/xsl/MelnicsTable"/>
+		      <link-stylesheet ref="/css/default"/>
 		      <link-stylesheet ref="//slothsoft@slothsoft/css/default"/>
-		      <use-document ref="api/melnics-test"/>
+		      <use-document ref="/api/melnics-test"/>
 	    	</fragment>
 	     	<fragment name="translator">
 		        <import ref="//slothsoft@core/api/DOM"/>
-		        <use-template ref="xsl/melnics.translator"/>
-		        <link-stylesheet ref="css/default"/>
+		        <use-template ref="/xsl/melnics.translator"/>
+		        <link-stylesheet ref="/css/default"/>
 		        <link-stylesheet ref="//slothsoft@slothsoft/css/kana"/>
-		        <link-script ref="js/MelnicsTranslator"/>
+		        <link-script ref="/js/MelnicsTranslator"/>
 	    	</fragment>
 	    </fragment>
 	    <fragment name="eternia">
 	     	<fragment name="home">
-	        	<use-template ref="xsl/eternia-home"/>
+	        	<use-template ref="/xsl/eternia-home"/>
 	    	</fragment>
 	    	<fragment name="craymels">
-		        <use-template ref="xsl/CraymelEditor"/>
-		        <link-stylesheet ref="css/default"/>
+		        <use-template ref="/xsl/CraymelEditor"/>
+		        <link-stylesheet ref="/css/default"/>
 		        <import ref="//slothsoft@core/api/DOM"/>
-		        <link-script ref="js/craymelEditor"/>
+		        <link-script ref="/js/craymelEditor"/>
 		        <link-script ref="//slothsoft@core/js/TouchAndDrag"/>
-		        <use-document ref="static/CraymelEditor"/>
+		        <use-document ref="/static/CraymelEditor"/>
 	    	</fragment>
 	    </fragment>
 	    <fragment name="graces">
 	     	<fragment name="home">
-	        	<use-template ref="xsl/graces-home"/>
+	        	<use-template ref="/xsl/graces-home"/>
 	    	</fragment>
 	    </fragment>
 	 </fragment>
