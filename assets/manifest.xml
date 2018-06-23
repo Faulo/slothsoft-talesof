@@ -74,6 +74,6 @@
 	 </fragment>
 	 
 	 <fragment name="api">
-	 	<custom-asset name="melnics-test" class="Slothsoft\TalesOf\Assets\MelnicsTest"/>
+	 	<custom-asset name="melnics-test" executable-builder="Slothsoft\TalesOf\Assets\MelnicsTestBuilder"/>
 	 </fragment>
   </assets>
