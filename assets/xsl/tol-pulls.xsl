@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
-	xmlns="http://www.w3.org/1999/xhtml"
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:template match="/data">
@@ -116,30 +115,50 @@ var PullEditor = {
 			<form method="POST" action="" onsubmit="return PullEditor.submit(this)">
 				<fieldset>
 					<legend>Settings</legend>
-					<table>	
+					<table>
 						<tbody>
 							<tr>
 								<th>Probability ✰✰✰</th>
-								<td data-value="64"><input name="probThrees" type="range" min="0" max="100" step="1" value="64" oninput="this.parentNode.setAttribute('data-value', this.value)"/></td>
+								<td data-value="64">
+									<input name="probThrees" type="range" min="0" max="100" step="1" value="64"
+										oninput="this.parentNode.setAttribute('data-value', this.value)" />
+								</td>
 							</tr>
 							<tr>
 								<th>Probability ✰✰✰✰</th>
-								<td data-value="30"><input name="probFours" type="range" min="0" max="100" step="1" value="30" oninput="this.parentNode.setAttribute('data-value', this.value)"/></td>
+								<td data-value="30">
+									<input name="probFours" type="range" min="0" max="100" step="1" value="30"
+										oninput="this.parentNode.setAttribute('data-value', this.value)" />
+								</td>
 							</tr>
 							<tr>
 								<th>Probability ✰✰✰✰✰</th>
-								<td data-value="6"><input name="probFives" type="range" min="0" max="100" step="1" value="6" oninput="this.parentNode.setAttribute('data-value', this.value)"/></td>
+								<td data-value="6">
+									<input name="probFives" type="range" min="0" max="100" step="1" value="6"
+										oninput="this.parentNode.setAttribute('data-value', this.value)" />
+								</td>
 							</tr>
 							<tr>
 								<td colspan="2">
-									<label><input type="radio" name="guarantee" required="required" value="three"/> No guarantee</label>
-									<label><input type="radio" name="guarantee" required="required" value="four"/> 1x✰✰✰✰ guaranteed</label>
-									<label><input type="radio" name="guarantee" required="required" value="five"/> 1x✰✰✰✰✰ guaranteed</label>
+									<label>
+										<input type="radio" name="guarantee" required="required" value="three" />
+										No guarantee
+									</label>
+									<label>
+										<input type="radio" name="guarantee" required="required" value="four" />
+										1x✰✰✰✰ guaranteed
+									</label>
+									<label>
+										<input type="radio" name="guarantee" required="required" value="five" />
+										1x✰✰✰✰✰ guaranteed
+									</label>
 								</td>
 							</tr>
 							<tr>
 								<th>Number of pulls</th>
-								<td><input name="pulls" type="number" min="1" max="100" step="1" value="1"/></td>
+								<td>
+									<input name="pulls" type="number" min="1" max="100" step="1" value="1" />
+								</td>
 							</tr>
 						</tbody>
 						<button type="submit">Generate!</button>
@@ -147,19 +166,25 @@ var PullEditor = {
 				</fieldset>
 				<fieldset>
 					<legend>Results</legend>
-					<table>	
+					<table>
 						<tbody>
 							<tr>
-								<th/>
+								<th />
 								<th>✰✰✰</th>
 								<th>✰✰✰✰</th>
 								<th>✰✰✰✰✰</th>
 							</tr>
 							<tr>
 								<th>Expected value:</th>
-								<td><output name="outThrees">?</output></td>
-								<td><output name="outFours">?</output></td>
-								<td><output name="outFives">?</output></td>
+								<td>
+									<output name="outThrees">?</output>
+								</td>
+								<td>
+									<output name="outFours">?</output>
+								</td>
+								<td>
+									<output name="outFives">?</output>
+								</td>
 							</tr>
 						</tbody>
 					</table>

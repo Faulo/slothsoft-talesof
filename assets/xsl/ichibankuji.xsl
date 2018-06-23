@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
-	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:template match="/data/data">
 		<html class="kuji">
 			<head>
-				<title><xsl:value-of select="@name"/></title>
-<style type="text/css"><![CDATA[
+				<title>
+					<xsl:value-of select="@name" />
+				</title>
+				<style type="text/css"><![CDATA[
 html.kuji {
 	background-color: rgba(255, 255, 0, 0.2);
 	padding: 1em;
@@ -49,26 +49,34 @@ figcaption {
 }
 
 ]]>
-</style>
+				</style>
 			</head>
 			<body>
-				<h1><a href="{@href}"><xsl:value-of select="@name"/></a></h1>
-				<h2><a href="http://bpnavi.jp/kuji/ssc/search_pref/{@id}/prize">Kuji Store Locator</a></h2>
-				
+				<h1>
+					<a href="{@href}">
+						<xsl:value-of select="@name" />
+					</a>
+				</h1>
+				<h2>
+					<a href="http://bpnavi.jp/kuji/ssc/search_pref/{@id}/prize">Kuji Store Locator</a>
+				</h2>
+
 				<xsl:for-each select="item">
-					<xsl:sort select="@name"/>
+					<xsl:sort select="@name" />
 					<figure class="{@type}">
 						<a href="{@href}">
-							<img src="{@image}" alt="Item???"/>
-							<figcaption><xsl:value-of select="@name"/></figcaption>
+							<img src="{@image}" alt="Item???" />
+							<figcaption>
+								<xsl:value-of select="@name" />
+							</figcaption>
 						</a>
 					</figure>
 				</xsl:for-each>
-				
+
 				<xsl:if test="html:*">
 					<pre>ERROR D:</pre>
 					<div class="error">
-						<xsl:copy-of select="html:*"/>
+						<xsl:copy-of select="html:*" />
 					</div>
 				</xsl:if>
 			</body>
