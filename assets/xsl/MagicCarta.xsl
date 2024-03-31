@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<xsl:template match="cards">
+	<xsl:template match="/*">
 		<div>
 			<p data-media="screen">
 				Taken from
@@ -23,7 +23,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<xsl:for-each select="card">
+					<xsl:for-each select=".//card">
 						<tr>
 							<td>☐</td>
 							<td class="number">

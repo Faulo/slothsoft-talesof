@@ -51,12 +51,12 @@ var CraymelEditor = {
 		//this.drawParent.addEventListener("touchstart", function(eve) {}, false);
 		
 		req = new XMLHttpRequest();
-		req.open("GET", "/getAsset.php/talesof/xsl/CraymelEditor", false);
+		req.open("GET", "/slothsoft@talesof/xsl/CraymelEditor", false);
 		req.send();
 		this.templateDoc = req.responseXML;
 		
 		req = new XMLHttpRequest();
-		req.open("GET", "/getAsset.php/talesof/static/CraymelEditor", false);
+		req.open("GET", "/slothsoft@talesof/static/CraymelEditor", false);
 		req.send();
 		this.dataDoc = req.responseXML;
 		

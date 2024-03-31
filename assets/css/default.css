@@ -1,11 +1,11 @@
 @font-face {
 	font-family: myMelnics;
 	src: local("MelniksFont"),
-		url(/getAsset.php/slothsoft@talesof/static/fonts/MelniksFont.ttf)
+		url(/slothsoft@talesof/static/fonts/MelniksFont.ttf)
 		format("truetype"),
-		url(/getAsset.php/slothsoft@talesof/static/fonts/MelniksFont.otf)
+		url(/slothsoft@talesof/static/fonts/MelniksFont.otf)
 		format("opentype"),
-		url(/getAsset.php/slothsoft@talesof/static/fonts/MelniksFont.svg)
+		url(/slothsoft@talesof/static/fonts/MelniksFont.svg)
 		format("svg");
 }
 
