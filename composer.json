@@ -1,7 +1,7 @@
 {
 	"name" : "slothsoft/talesof",
 	"description" : "A Farah module that processes Tales stuff.",
-	"license" : "WTFPL",
+	"license" : "MIT",
 	"authors" : [{
 			"name" : "Daniel Schulz",
 			"email" : "info.slothsoft@gmail.com"
