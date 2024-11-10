@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sfm="http://schema.slothsoft.net/farah/module">
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sfm="http://schema.slothsoft.net/farah/module">
 
 	<xsl:import href="farah://slothsoft@farah/xsl/module" />
 
@@ -27,7 +26,8 @@
 				<article>
 					<h3>v1.0 - 09.08.2012</h3>
 					<p data-dict="">This editor allows you to find useful Craymel Configurations by showing all available Greater
-						Craymels and spells, and which craymel mage they would end up with.</p>
+						Craymels and spells, and which craymel mage they would end up with.
+					</p>
 					<p data-dict="">
 						Credit for the spell descriptions goes to Rena Chan for their
 						<a rel="external" href="http://www.gamefaqs.com/ps/526350-tales-of-destiny-ii/faqs/14481">awesome craymel guide</a>
@@ -37,7 +37,8 @@
 				<article>
 					<h3>v1.1 - 30.12.2012</h3>
 					<p data-dict="">Click on a Greater Craymel's name and drag it to another Craymel Cage, then drop it. The list will
-						update accordingly.</p>
+						update accordingly.
+					</p>
 				</article>
 				<article>
 					<h3>v1.2 - 16.02.2012</h3>
@@ -203,9 +204,9 @@
 				<xsl:value-of select="@name" />
 			</strong>
 			<code>
-				[
+				<xsl:text>[</xsl:text>
 				<xsl:value-of select="@cost" />
-				]
+				<xsl:text>]</xsl:text>
 			</code>
 		</a>
 	</xsl:template>
@@ -220,9 +221,9 @@
 				<xsl:value-of select="@name" />
 			</strong>
 			<code>
-				[
+				<xsl:text>[</xsl:text>
 				<xsl:value-of select="@element" />
-				]
+				<xsl:text>]</xsl:text>
 			</code>
 		</span>
 	</xsl:template>
@@ -314,9 +315,9 @@
 			<xsl:value-of select="$craymel/@name" />
 		</span>
 		<code>
-			[
-			<xsl:value-of select="./@lvl" />
-			]
+			<xsl:text>[</xsl:text>
+			<xsl:value-of select="@lvl" />
+			<xsl:text>]</xsl:text>
 		</code>
 	</xsl:template>
 </xsl:stylesheet>
