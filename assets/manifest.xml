@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
-<assets xmlns="http://schema.slothsoft.net/farah/module">
-	<resource-directory name="css" type="text/css"/>
-	<resource-directory name="js" type="application/javascript"/>
-	<resource-directory name="xsl" type="application/xslt+xml"/>
+<assets xmlns="http://schema.slothsoft.net/farah/module" version="1.1">
+	<resource-directory name="css" type="text/css" />
+	<resource-directory name="js" type="application/javascript" />
+	<resource-directory name="xsl" type="application/xslt+xml" />
 
-	<resource-directory name="dictionary" type="application/xml"/>
+	<resource-directory name="dictionary" type="application/xml" />
 	<directory name="static">
-		<resource-directory name="fonts" path="fonts" type="application/*"/>
-		<resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml"/>
-		<resource name="MagicCarta" path="MagicCarta.xml" type="application/xml"/>
-		<resource name="Melnics" path="Melnics.xml" type="application/xml"/>
-		<resource name="mc-cards" path="mc.cards.xml" type="application/xml"/>
-		<resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml"/>
+		<resource-directory name="fonts" path="fonts" type="application/*" />
+		<resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml" />
+		<resource name="MagicCarta" path="MagicCarta.xml" type="application/xml" />
+		<resource name="Melnics" path="Melnics.xml" type="application/xml" />
+		<resource name="mc-cards" path="mc.cards.xml" type="application/xml" />
+		<resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml" />
 		<resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv">
-			<options output="thead"/>
+			<options output="thead" />
 		</resource>
 	</directory>
 
@@ -21,59 +21,59 @@
 
 	<fragment name="html">
 		<fragment name="home">
-			<use-template ref="/xsl/tales-home"/>
+			<use-template ref="/xsl/tales-home" />
 		</fragment>
 		<fragment name="carta">
 			<fragment name="home">
-				<use-template ref="/xsl/mc-home"/>
+				<use-template ref="/xsl/mc-home" />
 			</fragment>
 			<fragment name="list">
-				<use-template ref="/xsl/MagicCarta"/>
-				<use-document ref="/static/MagicCarta"/>
-				<link-stylesheet ref="/css/default"/>
+				<use-template ref="/xsl/MagicCarta" />
+				<use-document ref="/static/MagicCarta" />
+				<link-stylesheet ref="/css/default" />
 			</fragment>
 		</fragment>
 		<fragment name="melnics">
 			<fragment name="test">
-				<use-template ref="/xsl/Melnics"/>
-				<link-stylesheet ref="/css/default"/>
-				<use-document ref="/api/melnics-test" name="melnics-test"/>
+				<use-template ref="/xsl/Melnics" />
+				<link-stylesheet ref="/css/default" />
+				<use-document ref="/api/melnics-test" name="melnics-test" />
 			</fragment>
 			<fragment name="table">
-				<use-template ref="/xsl/MelnicsTable"/>
-				<link-stylesheet ref="/css/default"/>
-				<link-stylesheet ref="//slothsoft@slothsoft.net/css/default"/>
-				<use-document ref="/api/melnics-test" name="melnics-test"/>
+				<use-template ref="/xsl/MelnicsTable" />
+				<link-stylesheet ref="/css/default" />
+				<link-stylesheet ref="//slothsoft@slothsoft.net/css/default" />
+				<use-document ref="/api/melnics-test" name="melnics-test" />
 			</fragment>
 			<fragment name="translator">
-				<import ref="//slothsoft@core/api/DOM"/>
-				<use-template ref="/xsl/melnics.translator"/>
-				<link-stylesheet ref="/css/default"/>
-				<link-stylesheet ref="//slothsoft@slothsoft.net/css/kana"/>
-				<link-script ref="/js/MelnicsTranslator"/>
+				<import ref="//slothsoft@core/api/DOM" />
+				<use-template ref="/xsl/melnics.translator" />
+				<link-stylesheet ref="/css/default" />
+				<link-stylesheet ref="//slothsoft@slothsoft.net/css/kana" />
+				<link-script ref="/js/MelnicsTranslator" />
 			</fragment>
 		</fragment>
 		<fragment name="eternia">
 			<fragment name="home">
-				<use-template ref="/xsl/eternia-home"/>
+				<use-template ref="/xsl/eternia-home" />
 			</fragment>
 			<fragment name="craymels">
-				<use-template ref="/xsl/CraymelEditor"/>
-				<link-stylesheet ref="/css/default"/>
-				<import ref="//slothsoft@core/api/DOM"/>
-				<link-script ref="/js/craymelEditor"/>
-				<link-script ref="//slothsoft@core/js/TouchAndDrag"/>
-				<use-document ref="/static/CraymelEditor" name="CraymelEditor"/>
+				<use-template ref="/xsl/CraymelEditor" />
+				<link-stylesheet ref="/css/default" />
+				<import ref="//slothsoft@core/api/DOM" />
+				<link-script ref="/js/CraymelEditor" />
+				<link-script ref="//slothsoft@core/js/TouchAndDrag" />
+				<use-document ref="/static/CraymelEditor" name="CraymelEditor" />
 			</fragment>
 		</fragment>
 		<fragment name="graces">
 			<fragment name="home">
-				<use-template ref="/xsl/graces-home"/>
+				<use-template ref="/xsl/graces-home" />
 			</fragment>
 		</fragment>
 	</fragment>
 
 	<fragment name="api">
-		<custom-asset name="melnics-test" executable-builder="Slothsoft\TalesOf\Assets\MelnicsTestBuilder"/>
+		<custom-asset name="melnics-test" executable-builder="Slothsoft\TalesOf\Assets\MelnicsTestBuilder" />
 	</fragment>
 </assets>

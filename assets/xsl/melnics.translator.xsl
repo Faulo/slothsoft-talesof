@@ -149,12 +149,14 @@
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:variable>
+									<!-- 
 									<xsl:call-template name="word.complete">
 										<xsl:with-param name="lang" select="'ja-jp'" />
 										<xsl:with-param name="audio" select="$player" />
 										<xsl:with-param name="base" select="$base" />
 										<xsl:with-param name="top" select="$top" />
 									</xsl:call-template>
+									 -->
 									<!-- <xsl:variable name="player"> <xsl:choose> <xsl:when test="string-length(@name) = 0"> <xsl:value-of select="../@player-uri"/> 
 										</xsl:when> <xsl:otherwise> <xsl:value-of select="@player-uri"/> </xsl:otherwise> </xsl:choose> </xsl:variable> <xsl:call-template 
 										name="word.audioPlayer"> <xsl:with-param name="uri" select="$player"/> </xsl:call-template> <xsl:value-of select="@name"/> 
@@ -177,9 +179,11 @@
 							<xsl:variable name="charList" select="kana/@name | kana/kanji/@name" />
 							<xsl:for-each select="$charList[string-length(.) &gt; 0]">
 								<li>
+								<!-- 
 									<xsl:call-template name="word.strokeOrder">
 										<xsl:with-param name="text" select="." />
 									</xsl:call-template>
+									 -->
 								</li>
 							</xsl:for-each>
 						</ul>
@@ -191,7 +195,7 @@
 
 	<xsl:template name="translator.link">
 		<xsl:param name="kana" select="string(.)" />
-		<xsl:param name="player" />
+		<xsl:param name="player" select="/.."/>
 		<xsl:variable name="sourceURI" select="/*/*/@sourceURI" />
 		<xsl:variable name="playerURI" select="/*/*/@playerURI" />
 		<xsl:if test="$player">
