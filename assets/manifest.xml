@@ -42,14 +42,14 @@
 			<fragment name="table">
 				<use-template ref="/xsl/MelnicsTable" />
 				<link-stylesheet ref="/css/default" />
-				<link-stylesheet ref="//slothsoft@slothsoft.net/css/default" />
+				<!-- <link-stylesheet ref="//slothsoft@slothsoft.net/css/default" /> -->
 				<use-document ref="/api/melnics-test" name="melnics-test" />
 			</fragment>
 			<fragment name="translator">
 				<import ref="//slothsoft@core/api/DOM" />
 				<use-template ref="/xsl/melnics.translator" />
 				<link-stylesheet ref="/css/default" />
-				<link-stylesheet ref="//slothsoft@slothsoft.net/css/kana" />
+				<!-- <link-stylesheet ref="//slothsoft@slothsoft.net/css/kana" /> -->
 				<link-script ref="/js/MelnicsTranslator" />
 			</fragment>
 		</fragment>
