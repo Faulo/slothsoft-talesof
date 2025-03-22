@@ -16,7 +16,7 @@ var MelnicsTranslator = {
 			var req,
 				nodeList, i;
 			req = new XMLHttpRequest();
-			req.open("GET", "/getData.php/talesof/melnics.translator", false);
+			req.open("GET", "/slothsoft@talesof/static/Melnics", false);
 			req.send();
 			this.dataDoc = req.responseXML;
 			
