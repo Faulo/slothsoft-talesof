@@ -44,8 +44,8 @@ var MelnicsTranslator = {
             searchType = inputNode.getAttribute("data-translator-type");
             input = inputNode.value;
             input = input.toLowerCase();
-            alert(input);
             //input = input.split("\n").join(" ").split("\r").join(" ");
+            //alert(input);
             output = [];
             do {
                 found = false;
@@ -85,7 +85,9 @@ var MelnicsTranslator = {
                 }
             } while (found);
             output = output.join("");
-            alert(output);
+            //alert(output);
+            alert(this.formNodes["input-english"]);
+            alert(this.formNodes["output-english"]);
             switch (searchType) {
                 case "melnics":
                     this.formNodes["input-english"].value = output;
@@ -95,6 +97,7 @@ var MelnicsTranslator = {
                     break;
             }
             this.formNodes["output-english"].value = this.formNodes["input-english"].value;
+            alert(this.formNodes["output-english"].value);
             this.typingCharacter = false;
         }
     },
