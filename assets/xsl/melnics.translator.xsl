@@ -22,7 +22,7 @@
 					<p>
 						<a href="http://aselia.wikia.com/wiki/Melnics" rel="external">Melnics</a>
 						<xsl:text>, or, as some like to call it, </xsl:text>
-						<a href="https://lh5.googleusercontent.com/-DfxFBYMxnVc/UOE0aDX_VuI/AAAAAAAAGwM/qnnWBoxAXIU/s0/TOX_FansBible_Londau_01.jpg" rel="external">Londau</a>
+						<a href="/slothsoft@talesof/static/Londau" rel="external">Londau</a>
 						<xsl:text>, is the language used by some folks in Tales of Eternia and Tales of Xillia.</xsl:text>
 					</p>
 					<p>

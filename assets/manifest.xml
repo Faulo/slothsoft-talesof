@@ -10,6 +10,7 @@
 		<resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml" />
 		<resource name="MagicCarta" path="MagicCarta.xml" type="application/xml" />
 		<resource name="Melnics" path="Melnics.xml" type="application/xml" />
+		<resource name="Londau" path="Londau.png" type="image/jpg" />
 		<resource name="mc-cards" path="mc.cards.xml" type="application/xml" />
 		<resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml" />
 		<resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv">
