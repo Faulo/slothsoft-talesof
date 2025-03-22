@@ -4,7 +4,7 @@
 
 	<xsl:import href="farah://slothsoft@farah/xsl/module" />
 
-	<xsl:template match="/sfm:fragment">
+	<xsl:template match="/*">
 		<html>
 			<head>
 				<title>The Melnics Alphabet</title>

@@ -4,7 +4,7 @@
 
 	<xsl:import href="farah://slothsoft@farah/xsl/module" />
 
-	<xsl:template match="/sfm:fragment">
+	<xsl:template match="/*">
 		<div>
 			<xsl:apply-templates select="sfm:error" mode="sfm:html" />
 			<xsl:for-each select="*[@name = 'melnics.test']">
@@ -12,6 +12,7 @@
 			</xsl:for-each>
 		</div>
 	</xsl:template>
+	
 	<xsl:template match="test">
 		<form method="POST" action="." class="melnicsTest" data-dict=".//html:h2/text() | .//html:span/node()"
 			data-media="screen">
@@ -29,11 +30,11 @@ addEventListener(
 			<p class="Melnics">
 				If you can read this then you are either awesome or your browser does not support the downloading of the MelniksFont
 				in either
-				<a href="/getResource.php/talesof/fonts/MelniksFont.ttf">TTF</a>
+				<a href="/slothsoft@talesof/static/fonts/MelniksFont.ttf">TTF</a>
 				,
-				<a href="/getResource.php/talesof/fonts/MelniksFont.otf">OTF</a>
+				<a href="/slothsoft@talesof/static/fonts/MelniksFont.otf">OTF</a>
 				or
-				<a href="/getResource.php/talesof/fonts/MelniksFont.svg">SVG</a>
+				<a href="/slothsoft@talesof/static/fonts/MelniksFont.svg">SVG</a>
 				.
 			</p>
 			<p>

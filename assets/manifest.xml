@@ -24,9 +24,6 @@
 			<use-template ref="/xsl/tales-home" />
 		</fragment>
 		<fragment name="carta">
-			<fragment name="home">
-				<use-template ref="/xsl/mc-home" />
-			</fragment>
 			<fragment name="list">
 				<use-template ref="/xsl/MagicCarta" />
 				<use-document ref="/static/MagicCarta" />
@@ -54,9 +51,6 @@
 			</fragment>
 		</fragment>
 		<fragment name="eternia">
-			<fragment name="home">
-				<use-template ref="/xsl/eternia-home" />
-			</fragment>
 			<fragment name="craymels">
 				<use-template ref="/xsl/CraymelEditor" />
 				<link-stylesheet ref="/css/default" />
@@ -64,11 +58,6 @@
 				<link-script ref="/js/CraymelEditor" />
 				<link-script ref="//slothsoft@core/js/TouchAndDrag" />
 				<use-document ref="/static/CraymelEditor" name="CraymelEditor" />
-			</fragment>
-		</fragment>
-		<fragment name="graces">
-			<fragment name="home">
-				<use-template ref="/xsl/graces-home" />
 			</fragment>
 		</fragment>
 	</fragment>
